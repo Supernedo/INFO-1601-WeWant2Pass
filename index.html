@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>A Sip of Java</title>
+
+    <link rel = "stylesheet" href = "Styles.css">
+    <link class = "Thumbnail" rel = "icon" href = "https://cdn.discordapp.com/attachments/940788103998750720/965749786152149002/Pngtreeminimalistic_blue_cartoon_cloud_decoration_4492455.png">
+    <script src="JavaMain.js" defer></script>
+</head>
+
+<body onload ="OnPageLoad(1)">
+    <ul class = "NavBar">
+        <a href="#WeatherInfo">Weather Details</a>
+        <a href="#ProjectInfo">Project Information</a>
+        <a href="#Devs">Developers</a>
+
+        <div class = "Search">
+            <input type="text" class = "TypeSearch" placeholder="Search City">
+            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1.5em" 
+                width="1.5em" xmlns="http://www.w3.org/2000/svg"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,
+                4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z 
+                M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path><path d="M11.412,8.586C11.791,8.966,12,9.468,12,
+                10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z">
+            </path></svg></button>
+        </div>
+    </ul>
+
+    <div id = "WeatherInfo"></div>
+
+    <div class="WorkTitle">
+        <h1>A Sip of Java</h1>
+        <h2>INFO1601 Weather Data Visualization</h2>
+    </div>
+    
+    <div class = "WeatherCard">
+        <div class="Weather Loading">
+            <h3 class = "City">City Name</h3>
+            <div class="CityInfo">
+                <div class="Temp">Temperature</div>
+
+                <div class="Arrows">
+                    <button id = "LeftArrow"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="3em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></button>
+                    <button id = "RightArrow"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="3em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></button>
+                </div>
+                
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/02n.png" alt="" class = "WeatherIcon">
+                    <div class="WeatherDescription">Weather Description</div>
+                </div>
+                <div class="HumidityLevel">Humidity Level</div>
+                <div class="WindSpeed">Wind Speed</div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "WeatherCardLeft">
+        <div class="WeatherCardLeftNew">
+            <h3 class = "CityLeft">City Name</h3>
+            <div class="CityInfo">
+                <div class="TempLeft">Temperature</div>
+                
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/02n.png" alt="" class = "WeatherIconLeft">
+                    <div class="WeatherDescriptionLeft">Weather Description</div>
+                </div>
+                <div class="HumidityLevelLeft">Humidity Level</div>
+                <div class="WindSpeedLeft">Wind Speed</div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "WeatherCardRight">
+        <div class="WeatherCardRightNew">
+            <h3 class = "CityRight">City Name</h3>
+            <div class="CityInfo">
+                <div class="TempRight">Temperature</div>
+                
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/02n.png" alt="" class = "WeatherIconRight">
+                    <div class="WeatherDescriptionRight">Weather Description</div>
+                </div>
+                <div class="HumidityLevelRight">Humidity Level</div>
+                <div class="WindSpeedRight">Wind Speed</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="ProjectDetails">
+        <h1 id = "ProjectInfo"><b>PROJECT INFORMATION</b></h1>
+
+        <p>The Group (A Sip of Java), formerly called WeWant2Pass
+            has established a website to generate the Weather for any
+            City in the world.
+        </p>
+        <p>This website uses the API from <a href="https://openweathermap.org">Open Weather Map</a>
+            to pull and display data about the current weather from any city.
+        </p>
+        <p>The website starts by determining whether or not your browser supports
+            geolocation, once true, it will provide current statistics based on your location
+            accurate to the minute.
+        </p>
+        <p>Yup, the part you've all been waiting for, the masterminds behind the genius of the site.
+            Okay maybe not genius but, the website was developed by Ché Salazar, Seth Colon and Darius Castillo
+            with the aim of proper Data Visualization.
+        </p>
+
+        <p>Listed below are the ones responsible!</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="Developers">
+            <h1 id = "Devs"><b>Developers</b></h1>
+            <img class="Picture" id = "Seth" src="https://cdn.discordapp.com/attachments/940788103998750720/963158261232726016/Seth_Macfarlane.jpg" alt="">
+            <img class="Picture" id = "Darius" src="https://cdn.discordapp.com/attachments/940788103998750720/963158261572452422/Darius_Vassell.jpg" alt="">
+            <img class="Picture" id = "Che" src="https://cdn.discordapp.com/attachments/940788103998750720/963158260565815396/Michael_Che.jpg" alt="">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <ul class = "FooterBar">
+        <h4>Seth Colon</h4>
+        <h4>Darius Castillo</h4>
+        <h4>Ché Salazar</h4>
+    </ul>
+</footer>
+</html>

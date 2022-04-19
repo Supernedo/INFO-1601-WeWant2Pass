@@ -1,0 +1,430 @@
+* {
+    box-sizing: border-box
+  }
+  
+.Thumbnail
+{
+    border: none;
+}
+
+.NavBar
+{
+    display: flex;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 5%;
+
+    background: rgba(5, 5, 5, 0.422);
+}
+
+.NavBar > a
+{
+    font-size: large;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-shadow: 4px 4px 8px black;
+    color: rgb(9, 69, 166);
+    font-family: Verdana;
+}
+
+#WeatherInfo
+{
+    position: absolute;
+    top: 0%;
+}
+  
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("https://source.unsplash.com/featured/?Clouds");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+footer
+{
+    display:contents;
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+}
+
+.FooterBar
+{
+    display: flex;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 5%;
+
+    outline: rgb(0, 0, 0) solid 3px;
+    background: rgba(249, 249, 249, 0.675);
+}
+
+.FooterBar > h4
+{
+    font-size: large;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-shadow: 5px 5px 9px rgb(75, 69, 69);
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
+}
+
+.ProjectDetails
+{
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    padding: 10px;
+    background: rgba(2, 2, 2, 0.629);
+    font-family: Verdana;
+    font-size: larger;
+    text-align: center;
+    font-weight: bolder;
+    color: aliceblue;
+    text-shadow: 4px 4px 8px rgb(2, 2, 2);
+}
+
+.ProjectDetails p
+{
+    font-weight: 500;
+}
+
+#ProjectInfo
+{
+    margin-top: 5px;
+    background: #47404097;
+    outline: rgb(63, 63, 231) solid 2px;
+    padding: 0.2em;
+    color: rgb(63, 63, 231);
+    border-radius: 40px;
+}
+
+.Developers
+{
+    display: inline;
+    width: 100%;
+}
+
+#Devs
+{
+    background: #47404097;
+    outline: rgb(63, 63, 231) solid 2px;
+    color: rgb(63, 63, 231);
+    margin-bottom: -20px;
+    padding: 0.2em;
+    border-radius: 40px;
+}
+
+.Picture
+{
+    width: 20%;
+    margin: 57px;
+    margin-bottom: -10px;
+    outline: #000000 solid 2px;
+}
+
+#Seth
+{
+    width: 10%;
+    margin-right: 80px;
+    transition: all ease-in-out 500ms;
+}
+
+#Seth:hover
+{
+    width: 20%;
+}
+
+#Darius
+{
+    margin-left: 100px;
+    transition: all ease-in-out 500ms;
+}
+
+#Darius:hover
+{
+    width: 30%;
+}
+
+#Che
+{
+    margin-left: 90px;
+    transition: all ease-in-out 500ms;
+}
+
+#Che:hover
+{
+    width: 30%;
+}
+
+.WorkTitle
+{
+    position: absolute;
+    margin-top: -40em;
+    font-family:'Franklin Gothic Medium';
+    color: white;
+    text-align: center;
+    text-shadow: 4px 4px 8px black;
+}
+
+.WeatherCard
+{
+    background: #211a1ae7;
+    transition: all ease-in-out 500ms;
+    padding: 2em;
+    border-radius: 20px;
+    margin: 20px;
+    width: 600px;
+    height: 300px;
+    min-width: fit-content;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.WeatherCard:hover
+{
+    border-radius: 50px;
+    width: 640px;
+    height: 325px;
+}
+
+.WeatherCard:active
+{
+    cursor:progress;
+}
+
+.Arrows
+{
+    display:flex;
+    width:auto;
+
+    position: relative;
+    list-style-type: none;
+}
+
+#LeftArrow
+{
+    margin: auto;
+    margin-left: -1.6em;
+
+    height: 4em;
+    border-radius: 0%;
+}
+
+
+#RightArrow
+{
+    margin: auto;
+    margin-right: -1.6em;
+
+    height: 4em;
+    border-radius: 0%;
+}
+
+.CityInfo
+{
+    text-align: center;
+}
+
+.Weather
+{
+    color: aliceblue;
+    transition: all ease-in-out 500ms;
+}
+
+.WeatherDescription
+{
+    text-transform: capitalize;
+    font-size: large;
+}
+
+.Weather.Loading
+{
+    visibility: hidden;
+}
+
+.Search
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button
+{
+    margin: 1em;
+    border-radius: 50%;
+    border: none;
+    width: 2.2em;
+    height: 2.2em;
+    outline: none;
+    background: #faf6f61f;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+}
+
+button:hover
+{
+    background: #faf6f65d;
+}
+
+.TypeSearch
+{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 0.4em;
+    background: #faf6f61f;
+    font-family: 'Inconsolata', monospace;
+    font-size: 17px;
+    color: aliceblue;
+    width: calc(100% - 100px);
+    transition: all ease-in-out 300ms;
+}
+
+.TypeSearch:hover
+{
+    width: calc(100% + 100px);
+}
+
+.TypeSearch:placeholder-shown
+{
+    font-style: italic;
+}
+
+::placeholder
+{
+    color: rgb(179, 179, 179);
+}
+
+.City
+{
+    font-size:2.6em;
+    text-align: center;
+    margin-top: -20px;
+    color: rgb(255, 255, 255);
+
+    background: #917e7e21;
+    border-radius: 50px;
+}
+
+.Temp
+{
+    font-size:2em;
+}
+
+.flex
+{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.WeatherCardLeftNew
+{
+    margin-top: -2em;
+}
+
+.WeatherCardRightNew
+{
+    margin-top: -2em;
+}
+
+.WeatherCardLeft
+{
+    position: absolute;
+    padding: 3em;
+    border-radius: 30px;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 500ms;
+
+    margin-left: -60em;
+    width: 400px;
+    height: 250px;
+
+    color: white;
+    background: #292525d0;
+    opacity: 50%;
+    font-family: Verdana;
+    font-size: large;
+}
+
+.WeatherCardLeft:hover
+{
+    opacity: 100%;
+    width: 500px;
+    margin-left: -70em;
+}
+
+.WeatherCardRight
+{
+    position: absolute;
+    padding: 3em;
+    border-radius: 30px;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 500ms;
+
+    margin-right: -60em;
+    width: 400px;
+    height: 250px;
+
+    color: white;
+    background: #292525d0;
+    opacity: 50%;
+    font-family: Verdana;
+    font-size: large;
+}
+
+.WeatherCardRight:hover
+{
+    opacity: 100%;
+    width: 500px;
+    margin-right: -70em;
+}
+
+.CityLeft
+{
+    text-align: center;
+    font-size: xx-large;
+    background: rgba(75, 70, 70, 0.609);
+    border-radius: 20px;
+}
+
+.CityRight
+{
+    text-align: center;
+    font-size: xx-large;
+    background: rgba(75, 70, 70, 0.609);
+    border-radius: 20px;
+}
